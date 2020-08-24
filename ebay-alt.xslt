@@ -11,7 +11,7 @@
     </xsl:template>
 
     <xsl:template match="item">
-        <div class="col">
+        <div class="col font-size-12">
             <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
             <div class="card">
                 <strong><xsl:value-of select="title"/></strong>
@@ -42,6 +42,10 @@
                 <strong>Status:</strong>&#xA0;
 
                 <xsl:value-of select="sellingStatus/sellingState"/>
+                <br/>
+                <strong>End time:</strong>&#xA0;
+
+                <xsl:value-of select="listingInfo/endTime"/>
                 <div class="text-right">
                     <!-- text-right = text-align: right -->
                     <a class="btn" target="_blank">
