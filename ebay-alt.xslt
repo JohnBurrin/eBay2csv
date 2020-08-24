@@ -11,7 +11,7 @@
     </xsl:template>
 
     <xsl:template match="item">
-        <div class="col-3">
+        <div class="col">
             <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
             <div class="card">
                 <strong><xsl:value-of select="title"/></strong>
