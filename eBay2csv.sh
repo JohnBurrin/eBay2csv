@@ -86,7 +86,7 @@ if [ $# > 1 ]; then
 
     # Create the new file
     echo "Creating new file..."
-    #cat header.csv > $1
+    cat header.html > $1
 
     echo "Fetching data from eBay..."
     for i in $(seq 1 $totalPages);
@@ -105,7 +105,7 @@ if [ $# > 1 ]; then
         # Appent the csv page data to the csv file
 	    cat temp$i.csv >> $1
     done
-
+    cat footer.html >> $1
     # Clean up the temp files created by the script
     echo "Cleaning up..."
     rm *.xml
